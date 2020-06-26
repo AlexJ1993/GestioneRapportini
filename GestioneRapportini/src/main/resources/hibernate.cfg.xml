@@ -18,6 +18,6 @@
         <mapping class="it.gestrap.entita.Ruoli"/>
         <mapping class="it.gestrap.entita.Tipocommesse"/>
         <mapping class="it.gestrap.entita.Commesse"/>
-        <mapping class="it.gestrap.entita.Profilo"/>
+        <mapping class="it.gestrap.entita.Profilo"/>        
     </session-factory>
 </hibernate-configuration>
