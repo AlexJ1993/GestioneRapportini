@@ -1,5 +1,5 @@
 package it.gestrap.entita;
-// Generated 23 giu 2020, 22:40:43 by Hibernate Tools 5.1.10.Final
+// Generated 30 giu 2020, 16:48:26 by Hibernate Tools 5.1.10.Final
 
 import java.util.HashSet;
 import java.util.Set;
@@ -69,7 +69,7 @@ public class TipoContratto implements java.io.Serializable {
 		this.descrizione = descrizione;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "tipcontratto")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "tipocontratto")
 	public Set<Dipendenti> getDipendentis() {
 		return this.dipendentis;
 	}
