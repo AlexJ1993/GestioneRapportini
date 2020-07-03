@@ -1,10 +1,13 @@
 package it.gestrap.web.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
 
@@ -67,5 +70,13 @@ public class LoginController {
 			System.out.println("Utente inesistente.");
 		}
 		return model;
-	}  
+	}
+	
+	@RequestMapping(value = {"/logout"}, method = RequestMethod.GET)
+	public String logout(HttpServletRequest request, SessionStatus session){
+		session.setComplete();
+		request.getSession().invalidate();
+		return "indexLgo";
+	}
+	
 }
