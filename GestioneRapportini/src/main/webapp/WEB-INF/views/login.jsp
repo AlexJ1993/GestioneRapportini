@@ -83,13 +83,13 @@
 				<font color="white"> <label for="username">Codice Fiscale</label></font> <br>
 				<input type="text" name="cf" id="cf"
 					placeholder="inserisci codice fiscale" autocomplete="off"
-					class="form-control-material" required />
+					class="form-control-material"  th:field="*{cf}" required />
 			</div> <br>
 			<div class="form-input-material">
 				<font color="white"> <label for="password">Password</label>
 				</font> <br> <input type="password" name="password" id="password"
 					placeholder="inserisci password" autocomplete="off"
-					class="form-control-material" required />
+					class="form-control-material"  th:field="*{password}"required />
 			</div> <br>
 			<button type="submit" class="btn btn-primary btn-ghost">Login</button>
 		</font>

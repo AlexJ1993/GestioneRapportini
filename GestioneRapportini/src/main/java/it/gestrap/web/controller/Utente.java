@@ -1,4 +1,4 @@
-package it.gestrap.entita;
+package it.gestrap.web.controller;
 
 import org.springframework.stereotype.Component;
 
@@ -10,6 +10,15 @@ public class Utente {
 	String cf;
 	String profilo;
 	String stato;
+
+	public Utente() {
+	}
+	
+	public Utente(String cf, String profilo, String stato) {
+		this.cf = cf;
+		this.profilo = profilo;
+		this.stato = stato;
+	}
 
 	public String getCf() {
 		return cf;
