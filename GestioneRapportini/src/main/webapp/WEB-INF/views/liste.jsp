@@ -1,7 +1,9 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/functions" prefix = "fn" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	
 
 
 <!DOCTYPE html>
@@ -98,44 +100,44 @@
 	<table width=100% height="250px"  style="margin-bottom: 40px;">
 		<tr>
 			<th></th>
-			<th><center>
+			<th><left>
 					<h4>Seleziona la lista che vuoi visualizzare</h4>
-				</center></th>
+				</left></th>
 			<th></th>
 		</tr>
 
 		<c:set var="admin" value="admin" />
-		<c:if test="${utente.profilo eq admin}">
+		<c:if test = "${fn:containsIgnoreCase(utente.profilo, 'admin')}">
 			<tr>
-				<td width=20%></td>
+				<td width=13%></td>
 				<td><a href="dipendenti" id="button-2"
-					class="ui-btn ui-corner-all ui-btn-a">Dipendenti</a></td>
-				<td width=20%></td>
+					class=>Dipendenti</a></td>
+				<td width=13%></td>
 			</tr>
 		</c:if>
 
 
-		<c:if test="${utente.profilo eq admin}">
+		<c:if test = "${fn:containsIgnoreCase(utente.profilo, 'admin')}">
 			<tr>
-				<td width=20%></td>
+				<td width=10%></td>
 				<td><a href="clienti" id="button-2"
-					class="ui-btn ui-corner-all ui-btn-a">Clienti</a></td>
-				<td width=20%></td>
+					class=>Clienti</a></td>
+				<td width=10%></td>
 			</tr>
 		</c:if>
 
 		<tr>
-			<td width=20%></td>
+			<td width=10%></td>
 			<td><a href="rapportini" id="button-2"
-				class="ui-btn ui-corner-all ui-btn-a">Rapportini</a></td>
-			<td width=20%></td>
+				class=>Rapportini</a></td>
+			<td width=10%></td>
 		</tr>
 
 		<tr>
-			<td width=20%></td>
+			<td width=10%></td>
 			<td><a href="commesse" id="button-2"
-				class="ui-btn ui-corner-all ui-btn-a">Commesse</a></td>
-			<td width=20%></td>
+				class=>Commesse</a></td>
+			<td width=10%></td>
 		</tr>
 
 	</table>

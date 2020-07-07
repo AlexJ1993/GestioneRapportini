@@ -47,12 +47,13 @@ public class LoginController {
 
 		Dipendenti dipendete= service.getCf(cf);
 		String prifiloDip=dipendete.getProfilo().getProfilo();
-
+		int idDip=dipendete.getId();
 		if(dipendete!=null) { 
 			
 			if(dipendete.getPassword().equals(password)) {
 
 				model.setViewName("home");
+				utenteBean.setId(idDip);
 				utenteBean.setCf(cf);
 				utenteBean.setProfilo(prifiloDip);
 				utenteBean.setStato();
@@ -75,7 +76,7 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value = {"/logout"}, method = RequestMethod.GET)
-	public String logout(SessionStatus session, HttpServletRequest request,  HttpServletResponse response){
+	public String logout(HttpServletRequest request,  HttpServletResponse response){
 		ModelAndView model = new ModelAndView();
 		model.addObject("lgo", "Logout effettuato con successo");
 		utenteBean.setCf(null);
