@@ -4,8 +4,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 	
-
-
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -68,10 +66,6 @@
 </head>
 
 <body>
-	<c:set var="log" value="utenteNonLoggato" />
-	<c:if test="${utente.stato eq log}">
-		<c:redirect url="http://localhost:8080/GestioneRapportini2/login" />
-	</c:if>
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -96,8 +90,7 @@
 		</div>
 	</nav>
 	<!-- /.navbar-collapse -->
-
-	<table width=100% height="250px"  style="margin-bottom: 40px;">
+<table width=100% height="250px"  style="margin-bottom: 40px;">
 		<tr>
 			<th></th>
 			<th><left>
@@ -141,6 +134,8 @@
 		</tr>
 
 	</table>
+
+
 
 
 
